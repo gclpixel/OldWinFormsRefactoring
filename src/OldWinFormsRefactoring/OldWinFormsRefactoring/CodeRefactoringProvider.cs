@@ -9,7 +9,7 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace OldWinFormsRefactoring
 {
-	[ExportCodeRefactoringProvider(LanguageNames.CSharp, Name = nameof(OldWinFormsRefactoringCodeRefactoringProvider)), Shared]
+	[ExportCodeRefactoringProvider(LanguageNames.CSharp,LanguageNames.VisualBasic, Name = nameof(OldWinFormsRefactoringCodeRefactoringProvider)), Shared]
 	internal class OldWinFormsRefactoringCodeRefactoringProvider : CodeRefactoringProviderPlugin
 	{
 		public const string RefactoringId = "MoveTypeToFile";

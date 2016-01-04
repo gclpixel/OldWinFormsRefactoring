@@ -67,7 +67,7 @@ namespace OldWinFormsRefactoring
 				}
 			}
 
-			solution = solution.AddDocument(documentId, Path.GetFileNameWithoutExtension(document.Name) + ".designer.cs", newType.GetText(), document.Folders, null, true);
+			solution = solution.AddDocument(documentId, Path.GetFileNameWithoutExtension(document.Name) + ".designer"+ Path.GetExtension(document.Name), newType.GetText(), document.Folders, null, true);
 			CompilationUnitSyntax compilationUnitSyntax2 = SyntaxFactory.CompilationUnit().AddUsings(compilationUnitSyntax.Usings.ToArray()).AddMembers(new MemberDeclarationSyntax[]
 			{
 				SyntaxNodeExtensions.WithLeadingTrivia(SyntaxNodeExtensions.NormalizeWhitespace(SyntaxFactory.NamespaceDeclaration(namespaceDeclarationSyntax.Name), "    ", false), new SyntaxTrivia[]
